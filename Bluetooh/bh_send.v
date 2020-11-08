@@ -6,10 +6,11 @@
 //----------------------------------------------------------------
 
 
-module bh_send(
+module BH(
   input sys_clk,
   input sys_rst_n,
   input key,
+  output ATK_KEY,
   output uart_txd
 );
 
@@ -20,6 +21,7 @@ module bh_send(
 wire enable;
 wire [7:0] data;
 
+assign ATK_KEY = 1'b0;
 
 //-----------------------------------------
 // Module connect
